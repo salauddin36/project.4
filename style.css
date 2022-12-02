@@ -1,0 +1,214 @@
+*{
+    margin: 0;padding: 0;
+    font-family: 'Raleway', sans-serif;
+}
+header::before{
+    background-image: url(./img/gym-bg-img.jpg);
+    background-repeat: no-repeat;
+    /* background-position: center right; */
+    background-size: cover;
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    opacity: 0.9;
+}
+
+/*         nav        */
+nav{
+    height: 90px;
+    background-color: rgb(57, 57, 57);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 0 0 50px;
+    cursor: pointer;
+}
+nav .logo img{
+    width: 100px;
+}
+nav .logo p{
+    padding: 10px 0 0 0;
+    color: white;
+    font-weight: 550;
+    letter-spacing: 2px;
+}
+nav ul{
+    display: flex;
+}
+nav ul li{
+    list-style: none;
+    padding: 10px 20px;
+}
+nav ul li a{
+    color: white;
+    text-decoration: none;
+    padding-bottom:10px ;
+}
+nav ul li a:hover{
+    color: rgb(255, 0, 0);
+    border-bottom: 2px solid red;
+    transition: 0.2s ease;
+}
+nav button{
+    width: 100px;
+    height: 40px;
+    margin: 0 20px;
+    font-size: 16px;
+    background-color: rgb(252, 93, 93);
+    border-radius: 5px;
+}
+nav button:hover{
+    background-color: transparent;
+    color: red;
+}
+
+/*               form          */
+main .container{
+    color: white;
+    width: 370px;
+    position: absolute;
+    top: 130px;
+    left: 220px;
+    border: 1px solid black;
+    padding: 0 0 20px 0;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+main .container input[type=text], input[type=number], input[type=email]{
+    width: 90%;
+    height: 30px;
+    border-radius: 5px;
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    padding-left: 10px;
+    box-sizing: border-box;
+    font-weight: 550;
+    letter-spacing: 0.8px;
+    outline: none;
+}
+main .container h3{
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+main .container .info label{
+    margin-left: 25px;
+    font-style: italic;
+}
+
+/*            */
+
+main .gender input[type=radio]{
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+main .gender p{
+    margin-left: 20px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+main .gender label{
+    margin-left: 50px;
+}
+
+/*              */
+main .Schedule input[type=checkbox]{
+    margin-left: 30px;
+}
+main .Schedule p{
+    margin-left: 20px;
+    font-style: italic;
+    margin-bottom: 10px;
+}
+main .Schedule label{
+    margin-left: 5px;
+}
+
+/*        */
+main .container .btn{
+    width: 200px;
+    height: 30px;
+    margin-top: 20px;
+    margin-left: 80px;
+    background-color: rgb(252, 93, 93);
+    font-size: 15px;
+    border-radius: 7px;
+    cursor: pointer;
+    color: white;
+    letter-spacing: 0.8px;
+}
+main .container .btn:hover{
+    background-color: rgba(0, 0, 0, 0.423);
+    color: red;
+}
+
+
+/*       media querry        */
+@media screen and (max-width: 768px) {
+    header::before{
+        background-position: center center;
+    }
+
+    nav{height: 120px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    nav .logo{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin: 5px 0 0 0px;
+    }
+    nav .logo img{
+        width: 80px;
+    }
+    nav ul{
+        display: flex;
+        justify-content: center;
+    }
+    nav ul li{
+        list-style: none;
+        padding: 10px 7px;
+    }
+    nav ul li a{
+        font-size: 15px;
+    }
+    nav button{
+        display: none;
+    }
+
+    main .container{
+        width: 319px;
+        position: absolute;
+        top: 135px;
+        left: 0px;
+    }
+    main .container input[type=text], input[type=number], input[type=email]{
+        
+        height: 25px;
+        margin-top: 2px;
+        margin-bottom: 15px;
+    }
+    main .container h3{
+        margin-bottom: 20px;
+    }
+    
+    /*              */
+    main .Schedule input[type=checkbox]{
+        margin-left: 10px;
+    }
+}
